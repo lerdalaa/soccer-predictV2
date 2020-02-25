@@ -1,0 +1,53 @@
+<head>
+  <title>Soccer predict</title>
+
+  
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+
+<body>
+  <div class="app-container">
+    <h1>Soccer prediction</h1>
+    <form  autocomplete="off">
+      <div class="teams-container">
+        <div class="hometeam-container">
+          <input class="input" id="home" type="text" placeholder="Home team">
+          <div id="homeMatches">
+            
+          </div>
+        </div>
+        <p id="vs">VS.</p>
+        <div class="awayteam-container">
+          <input class="input" id="away" type="text" placeholder="Away team">
+          <div id="awayMatches">
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="calc-btn">
+          Calculate
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="results-container">
+    <h3>
+      Results:
+    </h3>
+    <div class="teams-container">
+      <p>Home victory:<br><span id="home_pc"></span>%</p>
+      <p>Draw:<br><span id="draw_pc"></span>%</p>
+      <p>Away victory:<br><span id="away_pc"></span>%</p>
+    </div>
+  </div>
+  
+  <script>
+    var teams = JSON.parse('{{ teams | tojson | safe}}');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>

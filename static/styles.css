@@ -1,0 +1,111 @@
+body {
+  background-color: rgb(212, 212, 212) !important;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  line-height: 1.3;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+#vs {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+
+.app-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 70px 0;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.teams-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+}
+
+.results-container {
+  display: none;
+  width: 500px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 20px 0;
+  background-color: #ffffff;
+  border-radius: 3px;
+
+}
+.input {
+  width: 150px;
+  border-radius: 1px;
+
+}
+
+
+.hometeam-container {
+  margin: auto;
+  margin-left: 50px;
+  position: relative;
+}
+.awayteam-container {
+  margin: auto;
+  margin-right: 50px;
+  position: relative;
+}
+
+#homeMatches, #awayMatches {
+  position: absolute;
+  width: 150px;
+  margin-bottom: 2px;
+  background-color: white;
+}
+
+.autoComplete:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+
+.autoComplete {
+  border: solid grey 1px;
+  text-align: left;
+  padding-top: 1px;
+}
+
+#vs {
+  margin: auto;
+  color: grey;
+}
+
+.calc-btn {
+  float: right;
+  padding: 6px 30px;
+  margin-top: 20px;
+  margin-right: 49px;
+  border-radius: 15px;
+  background-color: green;
+  font-size: 15px;
+  color: white;
+}
+.calc-btn:hover {
+  background-color: darkgreen;
+}
